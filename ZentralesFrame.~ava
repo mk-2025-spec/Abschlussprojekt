@@ -19,7 +19,7 @@ public class ZentralesFrame extends Frame {
     addWindowListener(new WindowAdapter() {
       public void windowClosing(WindowEvent evt) { dispose(); }
     });
-    int frameWidth = 292; 
+    int frameWidth = 300;
     int frameHeight = 300;
     setSize(frameWidth, frameHeight);
     Dimension d = Toolkit.getDefaultToolkit().getScreenSize();

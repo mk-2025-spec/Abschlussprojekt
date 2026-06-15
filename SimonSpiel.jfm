@@ -1,10 +1,10 @@
 object FGUIForm: TFGUIForm
   Left = 248
-  Top = 154
+  Top = 172
   BorderIcons = [biSystemMenu]
-  Caption = 'ZentralesFrame'
-  ClientHeight = 261
-  ClientWidth = 276
+  Caption = 'SimonSpiel'
+  ClientHeight = 243
+  ClientWidth = 275
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -27,7 +27,7 @@ object FGUIForm: TFGUIForm
   Resizable = True
   Undecorated = False
   Background = clWhite
-  Title = 'ZentralesFrame'
+  Title = 'SimonSpiel'
   FontSize = 11
   TextHeight = 15
   object GNUgettextMarker: TGnuGettextComponentMarker
