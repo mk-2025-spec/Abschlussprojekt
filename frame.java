@@ -19,8 +19,8 @@ public class frame extends Frame {
     addWindowListener(new WindowAdapter() {
       public void windowClosing(WindowEvent evt) { dispose(); }
     });
-    int frameWidth = 300;
-    int frameHeight = 300;
+    int frameWidth = 881; 
+    int frameHeight = 788;
     setSize(frameWidth, frameHeight);
     Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
     int x = (d.width - getSize().width) / 2;
