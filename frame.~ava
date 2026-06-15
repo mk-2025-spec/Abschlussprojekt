@@ -9,29 +9,24 @@ import java.awt.event.*;
  * @author 
  */
 
-public class ZentralesFrame extends Frame {
+public class frame extends Frame {
   // start attributes
   // end attributes
   
-  public ZentralesFrame() { 
+  public frame() { 
     // Frame init
     super();
     addWindowListener(new WindowAdapter() {
       public void windowClosing(WindowEvent evt) { dispose(); }
     });
-<<<<<<< HEAD
-    int frameWidth = 1071; 
-    int frameHeight = 1022;
-=======
     int frameWidth = 300;
     int frameHeight = 300;
->>>>>>> 111b4f845d3d4cc3aa9528b5eaead9392d705015
     setSize(frameWidth, frameHeight);
     Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
     int x = (d.width - getSize().width) / 2;
     int y = (d.height - getSize().height) / 2;
     setLocation(x, y);
-    setTitle("ZentralesFrame");
+    setTitle("frame");
     setResizable(false);
     Panel cp = new Panel(null);
     add(cp);
@@ -40,13 +35,13 @@ public class ZentralesFrame extends Frame {
     // end components
     
     setVisible(true);
-  } // end of public ZentralesFrame
+  } // end of public frame
   
   // start methods
   
   public static void main(String[] args) {
-    new ZentralesFrame();
+    new frame();
   } // end of main
   
   // end methods
-} // end of class ZentralesFrame
+} // end of class frame
