@@ -1,10 +1,19 @@
 object FGUIForm: TFGUIForm
+<<<<<<< HEAD
   Left = 530
   Top = 162
   BorderIcons = [biSystemMenu]
   Caption = 'frame'
   ClientHeight = 749
   ClientWidth = 865
+=======
+  Left = 240
+  Top = 154
+  BorderIcons = [biSystemMenu]
+  Caption = 'frame'
+  ClientHeight = 261
+  ClientWidth = 284
+>>>>>>> 111b4f845d3d4cc3aa9528b5eaead9392d705015
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
