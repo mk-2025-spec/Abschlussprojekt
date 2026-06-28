@@ -1,0 +1,35 @@
+object FGUIForm: TFGUIForm
+  Left = 1447
+  Top = 159
+  BorderIcons = [biSystemMenu]
+  Caption = 'SimonGame999'
+  ClientHeight = 728
+  ClientWidth = 611
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  Position = poDesigned
+  Visible = True
+  OnActivate = FormActivate
+  OnAfterMonitorDpiChanged = FormAfterMonitorDpiChanged
+  OnBeforeMonitorDpiChanged = FormBeforeMonitorDpiChanged
+  OnCanResize = FormCanResize
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDeactivate = FormDeactivate
+  OnMouseActivate = FormMouseActivate
+  OnResize = FormResize
+  Resizable = True
+  Undecorated = False
+  Background = clWhite
+  Title = 'SimonGame999'
+  FontSize = 11
+  TextHeight = 15
+  object GNUgettextMarker: TGnuGettextComponentMarker
+  end
+end
