@@ -5,7 +5,7 @@ import java.awt.*;
  * GUI mit mehreren Spielern + Highscoreliste
  */
 public class GameGUI extends JFrame {
-
+    
     private GameLogic game = new GameLogic();
     private JLabel status = new JLabel("Drücke Start", SwingConstants.CENTER);
 
@@ -17,7 +17,9 @@ public class GameGUI extends JFrame {
     private int playerCount = 0;
 
     private String currentPlayer = "";
-
+/**
+* GUI wird erstellt (Fenster, Buttons, Farben, Felder)
+*/
     public GameGUI() {
         setTitle("Farben-Merkspiel");
         setSize(400, 400);
@@ -46,14 +48,18 @@ public class GameGUI extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
     }
-
+/**
+* Baut einen automatisch erzeugten Button
+*/
     private JButton createButton(String name, int value, Color color) {
         JButton btn = new JButton(name);
         btn.setBackground(color);
         btn.addActionListener(e -> handleInput(value));
         return btn;
     }
-
+/**
+* Namenseingabe bei Spielstart
+*/
     private void startGame() {
 
         // 🔥 Spielername eingeben
@@ -62,13 +68,17 @@ public class GameGUI extends JFrame {
         game.resetGame();
         nextRound();
     }
-
+/**
+* Nächste Runde wird im Text erwähnt
+*/
     private void nextRound() {
         game.nextRound();
         status.setText("Runde: " + game.getLength());
         showSequence();
     }
-
+/**
+* Zeigt die zufällige Farbsequenz durch Farben, die kurz aufplopen
+*/
     private void showSequence() {
         new Thread(() -> {
             try {
@@ -91,13 +101,17 @@ public class GameGUI extends JFrame {
             } catch (Exception e) {}
         }).start();
     }
-
+/**
+* Spieler kann Buttons klicken
+*/
     private void setButtonsEnabled(boolean enabled) {
         for (JButton b : buttons) {
             b.setEnabled(enabled);
         }
     }
-
+/**
+* Spielerscore bei falschem Klick wird gespeichert und Spielstatus ausgegeben
+*/
     private void handleInput(int color) {
 
         if (!game.checkInput(color)) {

@@ -1,42 +1,47 @@
- import java.util.Random;
+import java.util.Random;
 
 /**
- * Diese Klasse enthält die komplette Spiellogik.
- * Sie verwaltet die Farbsequenz und überprüft die Eingaben.
+ * Spiellogik: verwaltet Sequenz und Eingabeprüfung
  */
 public class GameLogic {
 
-    private int[] sequence = new int[100]; // speichert Farbsequenz
-    private int length = 0;                // aktuelle Länge
-    private int inputIndex = 0;            // aktuelle Spielerposition
+/**
+* Zahlen durch Namen ersetzt
+*/
+    public static final int ROT = 0;
+    public static final int BLAU = 1;
+    public static final int GRUEN = 2;
+    public static final int GELB = 3;
+
+    private int[] sequence = new int[100];
+    private int length = 0;
+    private int inputIndex = 0;
+
     private Random rand = new Random();
 
-    /**
-     * Startet eine neue Runde → fügt neue Farbe hinzu
-     */
+/**
+* Bereitet eine Runde vor
+*/
     public void nextRound() {
-        sequence[length] = rand.nextInt(4); // Werte 0-3
+        sequence[length] = rand.nextInt(4);
         length++;
         inputIndex = 0;
     }
-
-    /**
-     * Gibt Farbe an Position zurück
-     */
+/**
+*Gibt ne Farbe aus der Sequenz zurück
+*/
     public int getColorAt(int index) {
         return sequence[index];
     }
-
-    /**
-     * Gibt aktuelle Länge zurück
-     */
+/**
+* Gibt die Länge der Sequenz zurück
+*/
     public int getLength() {
         return length;
     }
-
-    /**
-     * Prüft Spielereingabe
-     */
+/**
+* Prüft, ob die richtige Farbe gedrückt wurde
+*/
     public boolean checkInput(int color) {
         if (sequence[inputIndex] == color) {
             inputIndex++;
@@ -45,17 +50,15 @@ public class GameLogic {
             return false;
         }
     }
-
-    /**
-     * Prüft ob Runde abgeschlossen ist
-     */
+/**
+* Prüft, ob Eingabe richtig ist
+*/
     public boolean roundFinished() {
         return inputIndex == length;
     }
-
-    /**
-     * Setzt Spiel zurück
-     */
+/**
+* Alles wird zurückgesetzt
+*/
     public void resetGame() {
         length = 0;
         inputIndex = 0;
